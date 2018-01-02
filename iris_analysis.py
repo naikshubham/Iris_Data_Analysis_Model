@@ -2,6 +2,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
+from time import sleep
 
 #Load iris.csv into a pandas dataframe 
 iris = pd.read_csv("iris.csv")
@@ -13,7 +14,8 @@ iris = pd.read_csv("iris.csv")
 
 sns.set_style("whitegrid")
 sns.pairplot(iris,hue='species',size=3)
-plt.show()
+#plt.show()
+
 
 #Predicting the flower based on visualization of Pair Plots
 
@@ -28,4 +30,7 @@ elif (petal_length >= 5.3 and petal_length <= 7.0) and (petal_width >= 1.8 and p
 	print("The given properties are of Virginica flower")
 else:
 	print("Properties dont match any of the flowers")
-	
+
+print("Displaying Pair Plot ....")
+sleep(5)
+plt.show()
